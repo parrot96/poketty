@@ -28,7 +28,7 @@ con extensión .pkm para ello, de esta forma, cada p*kemon es un archivo .pkm.
 
 Para crear un pkm, crear un archivo de texto plano en la carpeta donde está el ejecutable 
 y la librería y rellenar los siguientes campos:
-
+```
 #version de poketty
 pkm=
 #nombre del p*kemon
@@ -67,9 +67,9 @@ pp4=
 pociones=
 #numero de antidotos que tiene el p*kemon
 antidotos=
-
+```
 Un ejemplo de archivo pkm valido es:
-
+```
 pkm=1.3
 nombre=abaddon
 pv=100
@@ -95,7 +95,7 @@ pp3=2
 pp4=1
 pociones=4
 antidotos=2
-
+```
 En los archivos pkm, poniendo "#" al empezar una linea permite escribir comentarios, estos serán ignorados por el programa.
 
 En el repositorio podrás encontrar tres ficheros .pkm: pikachu.pkm, infernape.pkm y abaddon.pkm, no son más que puros 
