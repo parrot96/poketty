@@ -98,6 +98,9 @@ antidotos=2
 ```
 En los archivos pkm, poniendo "#" al empezar una linea permite escribir comentarios, estos serán ignorados por el programa.
 
+Durante el juego se te pedirá que escribas el nombre del p0kemon, debes especificarle el nombre del archivo.pkm con su 
+extensión, por ejemplo "pikachu.pkm".
+
 En el repositorio podrás encontrar tres ficheros .pkm: pikachu.pkm, infernape.pkm y abaddon.pkm, no son más que puros 
 ejemplos para probar el juego, ¡Siéntete libre de escribir los tuyos propios!
 
