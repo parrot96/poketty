@@ -109,7 +109,8 @@ automáticamente archivos .pkm entre distintas versiones mientras se ejecuta pok
 
 # COLABORACIONES
 
-El desarrollador principal de este juego, como la licencia lo indica, es Francisco Domínguez Lerma, pero en esta release (poketty 1.3) también ha colaborado una persona con el nick "abaddon", ha contribuido aportando un .pkm que viene en esta release (aunque he tenido que adaptarlo a poketty 1.3).
+El desarrollador principal de este juego, como la licencia lo indica, es Francisco Domínguez Lerma, pero también ha colaborado una persona con el nick "abaddon", ha contribuido aportando un .pkm que viene en esta release (aunque he tenido 
+que adaptarlo a poketty 1.3).
 
 En esta última versión, ha colaborado muchísimo Dan Rulos con su aportación de upkm, upkm tiene su propio repositorio en github mantenido por Dan en: https://github.com/dalmemail/upkm
 
