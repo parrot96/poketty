@@ -1,10 +1,10 @@
 # ¿Qué es poketty?
 
-Poketty es un simulador de batallas p*kemon en modo consola para GNU/Linux.
+Poketty es un simulador de batallas p0kemon en modo consola para GNU/Linux.
 Esta licenciado bajo GPL y es totalmente libre, poketty usa la librería fcl.h
-para leer los archivos .pkm que contienen información de cada p*kemon,
+para leer los archivos .pkm que contienen información de cada p0kemon,
 (librería que es también libre bajo GPL y creada por el autor de este software)
-de esa forma puedes crear tus propios p*kemons personalizados para combatir,
+de esa forma puedes crear tus propios p0kemons personalizados para combatir,
 el programa al arrancar te pedirá el nombre de los pkm a cargar.
 
 # Compilando poketty
@@ -23,19 +23,19 @@ Y ejecutarlo con:
 ```
 # Creando tus propios .pkm
 
-Poketty no implementa los datos de los p*kemons hardcodeado en el código fuente, sino que utiliza archivos en texto plano 
-con extensión .pkm para ello, de esta forma, cada p*kemon es un archivo .pkm.
+Poketty no implementa los datos de los p0kemons hardcodeado en el código fuente, sino que utiliza archivos en texto plano 
+con extensión .pkm para ello, de esta forma, cada p0kemon es un archivo .pkm.
 
 Para crear un pkm, crear un archivo de texto plano en la carpeta donde está el ejecutable 
 y la librería y rellenar los siguientes campos:
 ```
 #version de poketty
 pkm=
-#nombre del p*kemon
+#nombre del p0kemon
 nombre=
-#vida del p*kemon
+#vida del p0kemon
 pv=
-#ataques del p*kemon
+#ataques del p0kemon
 ataque1=
 ataque2=
 ataque3=
@@ -45,27 +45,27 @@ ataque1_estado=
 ataque2_estado=
 ataque3_estado=
 ataque4_estado=
-#puntos de daño mínimo del p*kemon, es decir, la fuerza mínima de los ataques, corresponden con los ataques anteriores en 
+#puntos de daño mínimo del p0kemon, es decir, la fuerza mínima de los ataques, corresponden con los ataques anteriores en 
 orden
 pd1_min=
 pd2_min=
 pd3_min=
 pd4_min=
-#puntos de daño máximo del p*kemon, es decir, la fuerza máxima de los ataques, corresponden con los ataques anteriores en 
+#puntos de daño máximo del p0kemon, es decir, la fuerza máxima de los ataques, corresponden con los ataques anteriores en 
 orden
 pd1_max=
 pd2_max=
 pd3_max=
 pd4_max=
-#puntos de poder del p*kemon, es decir, las veces que puedes usar un ataque en la partida, corresponden 
+#puntos de poder del p0kemon, es decir, las veces que puedes usar un ataque en la partida, corresponden 
 #a los ataques anteriores y a los pd anteriores
 pp1=
 pp2=
 pp3=
 pp4=
-#numero de pociones que tiene el p*kemon
+#numero de pociones que tiene el p0kemon
 pociones=
-#numero de antidotos que tiene el p*kemon
+#numero de antidotos que tiene el p0kemon
 antidotos=
 ```
 Un ejemplo de archivo pkm valido es:
