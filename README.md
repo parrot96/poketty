@@ -10,17 +10,17 @@ el programa al arrancar te pedirá el nombre de los pkm a cargar.
 # Compilando poketty
 
 Para compilar y ejecutar el programa, ir a la carpeta descomprimida y compilarlo con:
-
+```
 make
-
+```
 Esto genera un ejecutable, para correrlo, primero darle permisos de ejecución con:
-
+```
 chmod +x poketty
-
+```
 Y ejecutarlo con:
-
+```
 ./poketty
-
+```
 # Creando tus propios .pkm
 
 Poketty no implementa los datos de los p*kemons hardcodeado en el código fuente, sino que utiliza archivos en texto plano 
