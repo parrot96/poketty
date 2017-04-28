@@ -20,7 +20,7 @@
 #include <string.h>
 #include <math.h>
 #include <time.h>
-#include "fcl.h"
+#include "ant/ant.h"
 #include "poketty.h"
 #include "upkm/upkm.h"
 
@@ -61,7 +61,7 @@ int main() {
 
 	char pkm[64];
 	char path_buffer[40];
-	if ((get_value_string(pokemon1_fcl, "pkm", pkm) != 0) || (strcmp(pkm, VERSION)) != 0) {
+	if ((get_string(pokemon1_fcl, "pkm", pkm) != 0) || (strcmp(pkm, VERSION)) != 0) {
 		char option[3];
 		do {
 			printf("El archivo '%s' necesita ser convertido.\n¿Iniciar la conversión? [S/n]", pokemon1_fcl);
@@ -80,7 +80,7 @@ int main() {
 			strcpy(pokemon1_fcl, path_buffer);
 		}
 	}
-	if ((get_value_string(pokemon2_fcl, "pkm", pkm) != 0) || (strcmp(pkm, VERSION)) != 0) {
+	if ((get_string(pokemon2_fcl, "pkm", pkm) != 0) || (strcmp(pkm, VERSION)) != 0) {
 		char option[3];
 		do {
 			printf("El archivo '%s' necesita ser convertido.\n¿Iniciar la conversión? [S/n]", pokemon2_fcl);

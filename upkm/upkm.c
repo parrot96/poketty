@@ -20,8 +20,8 @@
 #include <time.h>
 #include <fcntl.h>
 #include <string.h>
-/* fcl.h */
-#include "../fcl.h"
+/* ant.h */
+#include "../ant/ant.h"
 
 /* upkm v0.3.1 */
 
@@ -88,7 +88,7 @@ void make_pkm(char *input, char *output)
 		sprintf(buffer, "pkm=%s\n", VERSION);
 		write(fd, buffer, strlen(buffer));
 		for (int i = 0; i < 24; i++) {
-			value_string_result[i] = get_value_string(input, to_find[i], pokemon_data[i]);
+			value_string_result[i] = get_string(input, to_find[i], pokemon_data[i]);
 			if (value_string_result[i] != 0) {
 				strcpy(pokemon_data[i], new_data[i]);
 				printf("Creando campo '%s': OK\n", to_find[i]);
@@ -104,11 +104,11 @@ int upkm(char *input, char *output)
 {
 	int result = 0;
 	char pkm[64];
-	if ((get_value_string(input, "pkm", pkm)) == 0 && (strcmp(pkm, VERSION)) == 0) {
+	if ((get_string(input, "pkm", pkm)) == 0 && (strcmp(pkm, VERSION)) == 0) {
 		printf("Tu archivo ya es compatible con Poketty %s y no debe ser convertido\n", VERSION);
 	}
 	else {
-		if ((get_value_string(input, "nombre", pkm)) == 0) {
+		if ((get_string(input, "nombre", pkm)) == 0) {
 			make_pkm(input, output);
 			printf("El archivo '%s' ha sido convertido correctamente.\n", input);
 		}

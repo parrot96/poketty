@@ -1,6 +1,6 @@
 CC = gcc
 OBJ_NAME = poketty
-OBJS = main.c poketty.c fcl.c upkm/upkm.c
+OBJS = main.c poketty.c ant/ant.c upkm/upkm.c
 FLAGS = -std=c99
 
 all:

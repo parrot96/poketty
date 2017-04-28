@@ -4,7 +4,7 @@
 #include <math.h>
 #include <time.h>
 #include <string.h>
-#include "fcl.h"
+#include "ant/ant.h"
 
 pokemon pokemon1;
 pokemon pokemon2;
@@ -353,76 +353,76 @@ void definir_pokemon(char pokemon1_fcl[], char pokemon2_fcl[]) {
 	
 	//PRIMER POKEMON
 	//nombre del pokemon
-	get_value_string(pokemon1_fcl, "nombre", pokemon1.nombre);
+	get_string(pokemon1_fcl, "nombre", pokemon1.nombre);
 	//vida del pokemon
-	pokemon1.pv=get_value_int(pokemon1_fcl, "pv");
+	pokemon1.pv=get_int(pokemon1_fcl, "pv");
 	//nombre de los 4 ataques del pokemon
-	get_value_string(pokemon1_fcl, "ataque1", pokemon1.ataque1);
-	get_value_string(pokemon1_fcl, "ataque2", pokemon1.ataque2);
-	get_value_string(pokemon1_fcl, "ataque3", pokemon1.ataque3);
-	get_value_string(pokemon1_fcl, "ataque4", pokemon1.ataque4);
+	get_string(pokemon1_fcl, "ataque1", pokemon1.ataque1);
+	get_string(pokemon1_fcl, "ataque2", pokemon1.ataque2);
+	get_string(pokemon1_fcl, "ataque3", pokemon1.ataque3);
+	get_string(pokemon1_fcl, "ataque4", pokemon1.ataque4);
 	//puntos de daño máximo, el valor maximo de daño que causa cada ataque
-	pokemon1.pd_max[0]=get_value_int(pokemon1_fcl, "pd1_max");
-	pokemon1.pd_max[1]=get_value_int(pokemon1_fcl, "pd2_max");
-	pokemon1.pd_max[2]=get_value_int(pokemon1_fcl, "pd3_max");
-	pokemon1.pd_max[3]=get_value_int(pokemon1_fcl, "pd4_max");
+	pokemon1.pd_max[0]=get_int(pokemon1_fcl, "pd1_max");
+	pokemon1.pd_max[1]=get_int(pokemon1_fcl, "pd2_max");
+	pokemon1.pd_max[2]=get_int(pokemon1_fcl, "pd3_max");
+	pokemon1.pd_max[3]=get_int(pokemon1_fcl, "pd4_max");
         //puntos de daño mínimo, el valor maximo de daño que causa cada ataque
-	pokemon1.pd_min[0]=get_value_int(pokemon1_fcl, "pd1_min");
-	pokemon1.pd_min[1]=get_value_int(pokemon1_fcl, "pd2_min");
-	pokemon1.pd_min[2]=get_value_int(pokemon1_fcl, "pd3_min");
-	pokemon1.pd_min[3]=get_value_int(pokemon1_fcl, "pd4_min");
+	pokemon1.pd_min[0]=get_int(pokemon1_fcl, "pd1_min");
+	pokemon1.pd_min[1]=get_int(pokemon1_fcl, "pd2_min");
+	pokemon1.pd_min[2]=get_int(pokemon1_fcl, "pd3_min");
+	pokemon1.pd_min[3]=get_int(pokemon1_fcl, "pd4_min");
 	//estado en el que puede dejar al otro pokemon cada ataque
-	get_value_string(pokemon1_fcl, "ataque1_estado", pokemon1.ataque1_estado);
-	get_value_string(pokemon1_fcl, "ataque2_estado", pokemon1.ataque2_estado);
-	get_value_string(pokemon1_fcl, "ataque3_estado", pokemon1.ataque3_estado);
-	get_value_string(pokemon1_fcl, "ataque4_estado", pokemon1.ataque4_estado);
+	get_string(pokemon1_fcl, "ataque1_estado", pokemon1.ataque1_estado);
+	get_string(pokemon1_fcl, "ataque2_estado", pokemon1.ataque2_estado);
+	get_string(pokemon1_fcl, "ataque3_estado", pokemon1.ataque3_estado);
+	get_string(pokemon1_fcl, "ataque4_estado", pokemon1.ataque4_estado);
 	//puntos de poder, las veces que podemos usar x ataque en una batalla
-	pokemon1.pp[0]=get_value_int(pokemon1_fcl, "pp1");
-	pokemon1.pp[1]=get_value_int(pokemon1_fcl, "pp2");
-	pokemon1.pp[2]=get_value_int(pokemon1_fcl, "pp3");
-	pokemon1.pp[3]=get_value_int(pokemon1_fcl, "pp4");
+	pokemon1.pp[0]=get_int(pokemon1_fcl, "pp1");
+	pokemon1.pp[1]=get_int(pokemon1_fcl, "pp2");
+	pokemon1.pp[2]=get_int(pokemon1_fcl, "pp3");
+	pokemon1.pp[3]=get_int(pokemon1_fcl, "pp4");
 	//numero de pociones que tiene el pokemon
-	pokemon1.pociones=get_value_int(pokemon1_fcl, "pociones");
+	pokemon1.pociones=get_int(pokemon1_fcl, "pociones");
 	//numero de antidotos que tiene el pokemon
-	pokemon1.antidotos=get_value_int(pokemon1_fcl, "antidotos");
+	pokemon1.antidotos=get_int(pokemon1_fcl, "antidotos");
 	//estado inicial del pokemon
 	strcpy(pokemon1.estado, "normal");
  	
 // SEGUNDO POKEMON
 
 	//nombre del pokemon
-	get_value_string(pokemon2_fcl, "nombre", pokemon2.nombre);
+	get_string(pokemon2_fcl, "nombre", pokemon2.nombre);
 	//vida del pokemon
-	pokemon2.pv=get_value_int(pokemon2_fcl, "pv");
+	pokemon2.pv=get_int(pokemon2_fcl, "pv");
 	//nombre de los 4 ataques del pokemon
-	get_value_string(pokemon2_fcl, "ataque1", pokemon2.ataque1);
-	get_value_string(pokemon2_fcl, "ataque2", pokemon2.ataque2);
-	get_value_string(pokemon2_fcl, "ataque3", pokemon2.ataque3);
-	get_value_string(pokemon2_fcl, "ataque4", pokemon2.ataque4);
+	get_string(pokemon2_fcl, "ataque1", pokemon2.ataque1);
+	get_string(pokemon2_fcl, "ataque2", pokemon2.ataque2);
+	get_string(pokemon2_fcl, "ataque3", pokemon2.ataque3);
+	get_string(pokemon2_fcl, "ataque4", pokemon2.ataque4);
 	//puntos de daño máximo, el valor maximo de daño que causa cada ataque
-	pokemon2.pd_max[0]=get_value_int(pokemon2_fcl, "pd1_max");
-	pokemon2.pd_max[1]=get_value_int(pokemon2_fcl, "pd2_max");
-	pokemon2.pd_max[2]=get_value_int(pokemon2_fcl, "pd3_max");
-	pokemon2.pd_max[3]=get_value_int(pokemon2_fcl, "pd4_max");
+	pokemon2.pd_max[0]=get_int(pokemon2_fcl, "pd1_max");
+	pokemon2.pd_max[1]=get_int(pokemon2_fcl, "pd2_max");
+	pokemon2.pd_max[2]=get_int(pokemon2_fcl, "pd3_max");
+	pokemon2.pd_max[3]=get_int(pokemon2_fcl, "pd4_max");
         //puntos de daño mínimo, el valor maximo de daño que causa cada ataque
-	pokemon2.pd_min[0]=get_value_int(pokemon2_fcl, "pd1_min");
-	pokemon2.pd_min[1]=get_value_int(pokemon2_fcl, "pd2_min");
-	pokemon2.pd_min[2]=get_value_int(pokemon2_fcl, "pd3_min");
-	pokemon2.pd_min[3]=get_value_int(pokemon2_fcl, "pd4_min");
+	pokemon2.pd_min[0]=get_int(pokemon2_fcl, "pd1_min");
+	pokemon2.pd_min[1]=get_int(pokemon2_fcl, "pd2_min");
+	pokemon2.pd_min[2]=get_int(pokemon2_fcl, "pd3_min");
+	pokemon2.pd_min[3]=get_int(pokemon2_fcl, "pd4_min");
 	//estado en el que puede dejar al otro pokemon cada ataque
-	get_value_string(pokemon2_fcl, "ataque1_estado", pokemon2.ataque1_estado);
-	get_value_string(pokemon2_fcl, "ataque2_estado", pokemon2.ataque2_estado);
-	get_value_string(pokemon2_fcl, "ataque3_estado", pokemon2.ataque3_estado);
-	get_value_string(pokemon2_fcl, "ataque4_estado", pokemon2.ataque4_estado);
+	get_string(pokemon2_fcl, "ataque1_estado", pokemon2.ataque1_estado);
+	get_string(pokemon2_fcl, "ataque2_estado", pokemon2.ataque2_estado);
+	get_string(pokemon2_fcl, "ataque3_estado", pokemon2.ataque3_estado);
+	get_string(pokemon2_fcl, "ataque4_estado", pokemon2.ataque4_estado);
 	//puntos de poder, las veces que podemos usar x ataque en una batalla
-	pokemon2.pp[0]=get_value_int(pokemon2_fcl, "pp1");
-	pokemon2.pp[1]=get_value_int(pokemon2_fcl, "pp2");
-	pokemon2.pp[2]=get_value_int(pokemon2_fcl, "pp3");
-	pokemon2.pp[3]=get_value_int(pokemon2_fcl, "pp4");
+	pokemon2.pp[0]=get_int(pokemon2_fcl, "pp1");
+	pokemon2.pp[1]=get_int(pokemon2_fcl, "pp2");
+	pokemon2.pp[2]=get_int(pokemon2_fcl, "pp3");
+	pokemon2.pp[3]=get_int(pokemon2_fcl, "pp4");
 	//numero de pociones que tiene el pokemon
-	pokemon2.pociones=get_value_int(pokemon2_fcl, "pociones");
+	pokemon2.pociones=get_int(pokemon2_fcl, "pociones");
 	//numero de antidotos que tiene el pokemon
-	pokemon2.antidotos=get_value_int(pokemon2_fcl, "antidotos");
+	pokemon2.antidotos=get_int(pokemon2_fcl, "antidotos");
 	//estado inicial del pokemon
 	strcpy(pokemon2.estado, "normal");
 
